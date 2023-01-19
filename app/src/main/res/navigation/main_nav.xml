@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.diyorbek.roomdatabase_h21.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_courseListFragment"
+            app:destination="@id/courseListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseListFragment"
+        android:name="com.diyorbek.roomdatabase_h21.fragments.CourseListFragment"
+        android:label="fragment_course_list"
+        tools:layout="@layout/fragment_course_list" >
+        <action
+            android:id="@+id/action_courseListFragment_to_fragmentDetailFragment"
+            app:destination="@id/fragmentDetailFragment" />
+        <action
+            android:id="@+id/action_courseListFragment_to_addCourseFragment"
+            app:destination="@id/addCourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetailFragment"
+        android:name="com.diyorbek.roomdatabase_h21.fragments.FragmentDetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/addCourseFragment"
+        android:name="com.diyorbek.roomdatabase_h21.fragments.AddCourseFragment"
+        android:label="fragment_add_course"
+        tools:layout="@layout/fragment_add_course" >
+        <action
+            android:id="@+id/action_addCourseFragment_to_fragmentDetailFragment"
+            app:destination="@id/fragmentDetailFragment" />
+        <action
+            android:id="@+id/action_addCourseFragment_to_addModuleFragment"
+            app:destination="@id/addModuleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addModuleFragment"
+        android:name="com.diyorbek.roomdatabase_h21.fragments.AddModuleFragment"
+        android:label="fragment_add_module"
+        tools:layout="@layout/fragment_add_module" />
+</navigation>
